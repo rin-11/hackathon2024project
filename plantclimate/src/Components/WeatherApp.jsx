@@ -10,11 +10,23 @@ import drizzle_icon from './Assets/drizzle.png';
 import humidity_icon from './Assets/humidity.png';
 
 export const WeatherApp = () => {
+    let api_key = "bbe31ca2e8e78841c19c7c154ed245e7";
+
+    const search = async () => {
+        // get the search element
+        const element = document.getElementsByClassName("cityInput");
+        // check if input is empty
+        if(element[0].value === ""){
+            return 0;
+        };
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${element.value}&units=Metric&appid=${api_key}`;
+    };
+
   return (
     <div className="weather_container">
         <div className="top-bar">
                 <input type="text" className="cityInput" placeholder="Search" />
-                <div className="search-icon">
+                <div className="search-icon" onClick={()=>{search()}}> 
                     <img src={search_icon} alt="search" className="search" />
                 </div>     
         </div>
