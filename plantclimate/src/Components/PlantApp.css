@@ -1,3 +1,21 @@
 .back-to-homepage {
     margin-top: 50px;
   }
+
+  .plant-image {
+    width: 30vw; 
+    height: 22.5vw; 
+    object-fit: cover;
+    border-radius: 8px;
+    max-width: 200px; 
+    max-height: 150px; 
+  }
+  .plant-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .plant-item {
+    flex-direction: row;
+  }

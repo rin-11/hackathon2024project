@@ -11,14 +11,13 @@ export const PlantApp = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Specify the full URL of your backend endpoint
         const response = await axios.get('http://localhost:4000/api/plants');
-        setPlants(response.data.data); // Adjust based on the actual structure of your response
+        setPlants(response.data.data); 
       } catch (error) {
         console.error('Error fetching plants:', error);
       }
     };
-  
+
     fetchData();
   }, []);
 
@@ -27,7 +26,8 @@ export const PlantApp = () => {
   };
 
   const filteredPlants = plants.filter((plant) =>
-    plant.common_name.toLowerCase().includes(searchTerm.toLowerCase())
+    plant.common_name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    plant.scientific_name?.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -47,12 +47,12 @@ export const PlantApp = () => {
       <div className="plant-container">
         {filteredPlants.length > 0 ? (
           filteredPlants.map((plant) => (
-            <div key={plant._id} className="plant-item">
-              {/* Update plant name to be a Link */}
-              <Link to={`/plants/${plant._id}`}>
-                <h1>{plant.common_name}</h1>
+            <div key={plant.id} className="plant-item">
+              <Link to={`/plants/${plant.id}`}>
+                <h2>{plant.common_name}</h2>
+                <p>{plant.scientific_name}</p>
+                {plant.image_url && <img src={plant.image_url} alt={plant.scientific_name} className="plant-image" />}
               </Link>
-
             </div>
           ))
         ) : (
