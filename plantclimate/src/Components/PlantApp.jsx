@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './PlantApp.css';
 import search_icon from './Assets/search.png';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export const PlantApp = () => {
   const [plants, setPlants] = useState([]);
@@ -55,7 +56,10 @@ export const PlantApp = () => {
         {filteredPlants.length > 0 ? (
           filteredPlants.map((plant) => (
             <div key={plant._id} className="plant-item">
-              <h1>{plant.plantName}</h1>
+              {/* Update plant name to be a Link */}
+              <Link to={`/plant/${plant._id}`}>
+                <h1>{plant.plantName}</h1>
+              </Link>
               <p>{plant.botanicalName}</p>
             </div>
           ))
