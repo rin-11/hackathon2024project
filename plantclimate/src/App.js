@@ -11,7 +11,7 @@ function App() {
      <Router>
       <Routes>
         <Route path="/" element={<PlantApp />} />
-        <Route path="/plant/:plantName" element={<PlantDetails />} />
+        <Route path="/plants/:plantId" element={<PlantDetails />} />
       </Routes>
     </Router>
     </div>

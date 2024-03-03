@@ -57,7 +57,7 @@ export const PlantApp = () => {
           filteredPlants.map((plant) => (
             <div key={plant._id} className="plant-item">
               {/* Update plant name to be a Link */}
-              <Link to={`/plant/${plant._id}`}>
+              <Link to={`/plants/${plant._id}`}>
                 <h1>{plant.plantName}</h1>
               </Link>
               <p>{plant.botanicalName}</p>
