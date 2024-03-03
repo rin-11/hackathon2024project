@@ -10,23 +10,15 @@ export const PlantApp = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-        const options = {
-            method: 'GET',
-            url: 'https://garden-api.p.rapidapi.com/plants',
-            headers: {
-              'X-RapidAPI-Key': 'eae3c8bbcamshc65280e224f7d00p1faae9jsn05032c6193f5',
-              'X-RapidAPI-Host': 'garden-api.p.rapidapi.com'
-            }
-          };
-
       try {
-        const response = await axios.request(options);
-        setPlants(response.data); 
+        // Specify the full URL of your backend endpoint
+        const response = await axios.get('http://localhost:4000/api/plants');
+        setPlants(response.data.data); // Adjust based on the actual structure of your response
       } catch (error) {
-        console.error(error);
+        console.error('Error fetching plants:', error);
       }
     };
-
+  
     fetchData();
   }, []);
 
@@ -35,7 +27,7 @@ export const PlantApp = () => {
   };
 
   const filteredPlants = plants.filter((plant) =>
-    plant.plantName.toLowerCase().includes(searchTerm.toLowerCase())
+    plant.common_name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -58,13 +50,13 @@ export const PlantApp = () => {
             <div key={plant._id} className="plant-item">
               {/* Update plant name to be a Link */}
               <Link to={`/plants/${plant._id}`}>
-                <h1>{plant.plantName}</h1>
+                <h1>{plant.common_name}</h1>
               </Link>
-              <p>{plant.botanicalName}</p>
+
             </div>
           ))
         ) : (
-          <p>Loading error</p>
+          <p>Loading...</p>
         )}
       </div>
     </div>
