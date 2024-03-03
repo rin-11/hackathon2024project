@@ -71,9 +71,6 @@ export const WeatherApp = () => {
         }
     };
 
-
-
-
   return (
     <div className="weather_container">
         <div className="top-bar">
