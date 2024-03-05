@@ -1,29 +1,25 @@
 .weather_container {
-    width: 40%;
-    height: 20%;
-    margin: auto;
     margin: 10px;
     border-radius: 12px;
     background-image: linear-gradient(180deg, #e4e8ef 0%, #625b5b 100%);
 }
 
-.top-bar {
+.search-bar {
     display: flex;
     justify-content: center;
     gap: 14px;
-    padding-top: 20px;
-    margin: 10px;
+    padding: 10px;
 }
 
-.top-bar input {
+.search-bar input {
     display: flex;
-    width: 362px;
-    height: 50px;
+    width: 80%;
+    height: 15%;
     background-color: #e4e8ef;
     border: none;
     outline: none;
     border-radius: 40px;
-    padding-left: 20px;
+    padding: 15px;
     color: #626262;
     font-size: 20px;
     font-weight: 400;
@@ -34,33 +30,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 78px;
-    height: 50px;
+    width: 5%;
     background-color: #e4e8ef;
     border-radius: 40px;
     cursor: pointer;
 }
 
 .weather-image {
-    display: flex;
-    justify-content: center;
+    width: 20%;
+    height: 20%;
 }
 
 .weather-temp {
     display: flex;
-    justify-content: center;
     color: black;
-    font-size: 60px;
-    font-weight: 400;
+    font-size: 40px;
+    font-weight: 200;
 }
 
 .weather-location {
     display: flex;
     justify-content: center;
     color: black;
-    font-size: 20px;
-    font-weight: 200;
-    letter-spacing: 5px;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 7px;
     margin-top: 10px;
 }
 .feels-like {
@@ -77,19 +71,19 @@
     justify-content: center;
     display: flex;
     color: black;
+    font-size: 40px;
+    font-weight: 200;
 }
 
 .element {
     margin: auto;
     display: flex;
     align-items: flex-start;
-    gap: 10px;
-    padding-bottom: 20px;
 }
 
 .data {
-    font-size: 34px;
-    font-weight: 400;
+    font-size: 40px;
+    font-weight: 200;
 }
 
 .text {
