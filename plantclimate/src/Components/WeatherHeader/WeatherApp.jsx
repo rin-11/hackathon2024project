@@ -35,11 +35,11 @@ export const WeatherApp = () => {
             setLocation(data.name);
 
             // Calculate and update remaining daylight
-            const sunrise = new Date(data.sys.sunrise * 1000);
-            const sunset = new Date(data.sys.sunset * 1000);
+            const sunrise = data.sys.sunrise;
+            const sunset = data.sys.sunset;
             const daylightDuration = sunset - sunrise;
-            const hours = Math.floor(daylightDuration / (1000 * 60 * 60));
-            const minutes = Math.floor((daylightDuration % (1000 * 60 * 60)) / (1000 * 60));
+            const hours = Math.floor(daylightDuration / 3600); // Convert seconds to hours
+            const minutes = Math.floor((daylightDuration % 3600) / 60); // Remaining seconds converted to minutes
             setDaylightHours(`${hours}h ${minutes}m`);
 
             // Update weather icon based on the icon code
@@ -64,12 +64,12 @@ export const WeatherApp = () => {
                 <div className="data-container">
                     <div className="element weather-temp">{temperature}</div>
                     <div className="element weather-image">
-                        <img src={weatherIcon} alt="weather icon" />
+                        <img src={weatherIcon} alt="weather-icon" />
                     </div>
                     <div className="element daylight-hours">
                         <div className="data">
                             {daylightHours}
-                            <div className="text">Daylight Remaining</div>
+                            <div className="text">Remaining Daylight</div>
                         </div>
                     </div>
                     <div className="element humidity">
