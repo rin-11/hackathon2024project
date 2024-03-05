@@ -1,16 +1,19 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import WeatherApp from './Components/WeatherApp';
-import PlantApp from './Components/PlantApp';
-import PlantDetails from './Components/PlantDetails';
+import WeatherApp from './Components/Weather/WeatherApp';
+import PlantApp from './Components/Plants/PlantApp';
+import PlantDetails from './Components/Plants/PlantDetails';
+import NewsApp from './Components/Articles/NewsApp';
 
 function App() {
   return (
     <div className="App">
      <Router>
       <Routes>
-        <Route path="/" element={<PlantApp />} />
+        <Route path="/" element={<WeatherApp />} />
+        <Route path="/news" element={<NewsApp />} />
+        <Route path="/plants" element={<PlantApp />} />
         <Route path="/plants/:id" element={<PlantDetails />} />
       </Routes>
     </Router>

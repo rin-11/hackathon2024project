@@ -5,14 +5,14 @@ import clear_icon from './Assets/clear.png';
 import rain_icon from './Assets/rain.png';
 import wind_icon from './Assets/wind.png';
 import snow_icon from './Assets/snow.png';
-import clouds_icon from './Assets/cloud.png';
+import cloud_icon from './Assets/cloud.png';
 import drizzle_icon from './Assets/drizzle.png';
 import humidity_icon from './Assets/humidity.png';
 
 export const WeatherApp = () => {
     let api_key = "bbe31ca2e8e78841c19c7c154ed245e7";
 
-    const [weathericon, setWeatherIcon] = React.useState("clouds_icon");
+    const [weathericon, setWeatherIcon] = React.useState(cloud_icon);
 
     const search = async () => {
         // get the search element
@@ -49,7 +49,7 @@ export const WeatherApp = () => {
             setWeatherIcon(clear_icon);
         }
         else if(data.weather[0].icon === "02d" || data.weather[0].icon === "02n"){
-            setWeatherIcon(clouds_icon);
+            setWeatherIcon(cloud_icon);
         }
         else if(data.weather[0].icon === "03d" || data.weather[0].icon === "03n"){
             setWeatherIcon(drizzle_icon);

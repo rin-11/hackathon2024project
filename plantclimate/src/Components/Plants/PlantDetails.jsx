@@ -75,7 +75,7 @@ const PlantDetails = () => {
           )}
 
           <div className="back-to-homepage">
-            <Link to="/">Back to Search</Link>
+            <Link to="/plants">Back to Search</Link>
           </div>
         </>
       ) : (

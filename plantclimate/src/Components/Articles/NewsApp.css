@@ -1,0 +1,37 @@
+
+.news-container {
+    display: flex;
+    
+  }
+
+.news-image {
+        width: 30vw; 
+        height: 22.5vw; 
+        object-fit: cover;
+        border-radius: 8px;
+        max-width: 150px; 
+        max-height: 100px; 
+}
+.news {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.news-item {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 15px;
+}
+p {
+    font-size: 10px;
+}
