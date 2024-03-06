@@ -11,6 +11,11 @@ h1 {
   white-space: nowrap;
   margin: 0px 10px 0px; 
   padding-bottom: 5px; 
+  
+}
+
+.my-plants-container::-webkit-scrollbar {
+  display: none;
 }
 
 .my-plant-item {
@@ -27,3 +32,4 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
 }
+

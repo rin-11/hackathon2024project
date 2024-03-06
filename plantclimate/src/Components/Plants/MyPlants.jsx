@@ -22,18 +22,20 @@ const MyPlants = () => {
   return (
     <div className="myplants">
       <h1>My Plants</h1>
-      <div className="my-plants-container">
-        {plants.length > 0 ? (
-          plants.map((plant) => (
-            <Link key={plant.id} to={`/plants/${plant.id}`} className="my-plant-item">
-              {plant.image_url && (
-                <img src={plant.image_url} alt={plant.scientific_name || 'Plant'} />
-              )}
-            </Link>
-          ))
-        ) : (
-          <p>Loading...</p>
-        )}
+      <div className="my-plants-outer-container"> {/* Added outer container */}
+        <div className="my-plants-container">
+          {plants.length > 0 ? (
+            plants.map((plant) => (
+              <Link key={plant.id} to={`/plants/${plant.id}`} className="my-plant-item">
+                {plant.image_url && (
+                  <img src={plant.image_url} alt={plant.scientific_name || 'Plant'} />
+                )}
+              </Link>
+            ))
+          ) : (
+            <p>Loading...</p>
+          )}
+        </div>
       </div>
     </div>
   );
