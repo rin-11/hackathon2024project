@@ -49,7 +49,6 @@ const PlantDetails = () => {
     <div className="details-content">
       {plant ? (
         <>
-          <h1>{plant.common_name || 'Common name not available'}</h1>
           {plant.image_url && (
             <img
               src={plant.image_url}
@@ -57,13 +56,22 @@ const PlantDetails = () => {
               style={{ width: '300px', height: '300px', objectFit: 'cover' }}
             />
           )}
-          <p>Scientific Name: {plant.scientific_name || 'Not available'}</p>
-          <p>Family: {plant.family || 'Not available'}</p>
-          <p>Genus: {plant.genus || 'Not available'}</p>
-          <p>Native To: {plant.distribution?.native?.join(', ') || 'Not available'}</p>
-          <p>Type: {plant.vegetable ? 'Vegetable' : 'Not available'}</p>
-          <p>Edible: {plant.edible ? 'Yes' : 'No'}</p>
-
+          <div className="name">
+            <h1>{plant.common_name || 'Common name not available'}</h1>
+            <h3>{plant.scientific_name || 'Not available'}</h3>
+          </div>
+            <div className="native">
+              <h4>Native to:</h4>
+              <p>{plant.distribution?.native?.join(', ') || 'Not available'}</p>
+            </div>
+         <div className="type">
+            <h4>Type:</h4>
+            <p>{plant.vegetable ? 'Vegetable' : 'Not available'}</p>
+          </div>
+          <div className="edible">
+            <h4>Edible:</h4>
+            <p>{plant.edible ? 'Yes' : 'No'}</p>
+         </div>
           <h3>Additional Images:</h3>
           {plant.images && Object.keys(plant.images).length > 0 ? (
             Object.entries(plant.images).map(([key, images]) =>
