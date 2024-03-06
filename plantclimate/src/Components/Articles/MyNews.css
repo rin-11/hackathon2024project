@@ -3,13 +3,13 @@
   top: 250px; 
   left: 0;
   right: 0;
-  bottom: 60px; /* Add a bottom property if your design permits, to ensure it doesn't overlap with the footer */
-  overflow-y: auto; /* If you want to scroll within .mynews */
+  bottom: 60px; 
+  overflow-y: auto; 
 }
 
 .my-news {
   overflow-y: auto;
-  max-height: calc(100vh - 250px - 120px); /* Here, 60px is an example footer height */
+  max-height: calc(100vh - 250px - 120px); 
 }
 
 .my-news-container {
@@ -17,14 +17,18 @@
   flex-direction: column; 
   align-items: center;
 }
+.my-news::-webkit-scrollbar {
+  display: none;
+}
+
 
 .my-news-item {
-  width: 80%; /* Adjust width as needed */
-  margin-bottom: 20px; /* Add space between items */
+  width: 80%;
+  margin-bottom: 20px; 
   box-sizing: border-box;
 }
 
 .my-news-image {
-  max-width: 100%; /* Adjust if necessary */
+  max-width: 100%;
   height: auto;
 }

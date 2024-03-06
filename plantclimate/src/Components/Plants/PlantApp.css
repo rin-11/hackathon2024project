@@ -13,6 +13,7 @@
     position: relative; 
     padding-top: 120px; 
     margin: 10px;
+    overflow: none;
   }
 
   .plant-search-bar {
@@ -25,7 +26,7 @@
 
   .search-bar-container {
     position: fixed;
-    width: 98%; 
+    width: 95%; 
   }
 
   .plant-search-bar input {
@@ -41,11 +42,12 @@
 }
 
 .plant-results-container {
-  margin-top: 50px; 
+
+  margin-top: 30px; 
   overflow-y: auto; 
+  max-height: calc(90vh - 180px); 
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row-reverse;
   justify-content: space-between;
 }
 
@@ -63,6 +65,11 @@
   flex-direction: column; 
   align-items: center;
 }
+
+.plant-results-container::-webkit-scrollbar {
+  display: none;
+}
+
 
 
 

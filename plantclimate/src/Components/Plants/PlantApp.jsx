@@ -18,18 +18,18 @@ const PlantApp = () => {
   };
 
   useEffect(() => {
-    fetchData(); // Fetch all plants initially
+    fetchData(); 
   }, []);
 
   useEffect(() => {
     if (searchTerm) {
       const delayDebounceFn = setTimeout(() => {
         fetchData(searchTerm);
-      }, 500); // Delay for debounce
+      }, 500); 
 
-      return () => clearTimeout(delayDebounceFn); // Cleanup
+      return () => clearTimeout(delayDebounceFn); 
     } else {
-      fetchData(); // Fetch all plants if search term is cleared
+      fetchData(); 
     }
   }, [searchTerm]);
 
