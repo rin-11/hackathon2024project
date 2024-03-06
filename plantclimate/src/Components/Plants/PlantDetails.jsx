@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import './PlantDetails.css';
 
 const PlantDetails = () => {
@@ -75,10 +74,6 @@ const PlantDetails = () => {
           ) : (
             <p>No additional images available.</p>
           )}
-
-          <div className="back-to-homepage">
-            <Link to="/plants">Back to Search</Link>
-          </div>
         </>
       ) : (
         <p>Plant details not available.</p>
