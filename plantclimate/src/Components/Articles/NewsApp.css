@@ -1,16 +1,22 @@
 
 .news-container {
+    margin: 20px; 
+    overflow-y: auto; 
+    max-height: calc(100vh - 300px); 
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
   }
+.news-container::-webkit-scrollbar {
+    display: none;
+  } 
 
 .news-image {
     max-width: 100%; 
     max-height: auto; 
 }
 .news {
+    padding-top: 75px; /* Adjust this value based on your header's actual height */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -19,6 +25,7 @@
     border-radius: 40px;
     cursor: pointer;
 }
+
 
 .news-item {
     flex: 0 1 calc(33.333% - 20px); 

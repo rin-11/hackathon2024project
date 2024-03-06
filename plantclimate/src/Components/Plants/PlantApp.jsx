@@ -3,6 +3,7 @@ import './PlantApp.css';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
+
 const PlantApp = () => {
   const [plants, setPlants] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');

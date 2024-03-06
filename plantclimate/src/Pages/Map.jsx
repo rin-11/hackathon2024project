@@ -1,35 +1,15 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
+import './Map.css'; // Ensure you have this import if you're using CSS
+import mapImage from './PlantHardinessZones.png'
 
 const Map = () => {
-  const tableauVizRef = useRef(null);
-  const vizInstanceRef = useRef(null);
-
-  useEffect(() => {
-    const tableauVizUrl = "https://public.tableau.com/views/SmartGrowMap/PlantHardinessZones";
-    const options = {
-      device: "mobile",
-    };
-
-    const initViz = () => {
-      if (vizInstanceRef.current) {
-        vizInstanceRef.current.dispose();
-      }
-      if (tableauVizRef.current) {
-        vizInstanceRef.current = new window.tableau.Viz(tableauVizRef.current, tableauVizUrl, options);
-      }
-    };
-
-    initViz();
-    return () => {
-      if (vizInstanceRef.current) {
-        vizInstanceRef.current.dispose();
-      }
-    };
-  }, []); 
-
   return (
-    <div>
-      <div ref={tableauVizRef}></div> 
+    <div className="map-container">
+      <h2>Click the image below for our Smart Grow Interactive Map Data</h2>
+      <br></br>
+      <a href="https://public.tableau.com/app/profile/david.sutton2001/viz/SmartGrowMap/PlantHardinessZones" target="_blank" rel="noopener noreferrer">
+        <img src={mapImage} alt="Plant Hardiness Zones Map" />
+      </a>
     </div>
   );
 };

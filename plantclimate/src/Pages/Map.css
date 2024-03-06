@@ -1,0 +1,19 @@
+.map-container {
+    position: relative;
+    overflow: hidden;
+    top: 150px; 
+    margin: 10px;
+    text-align: center; 
+}
+
+.map-container a {
+    display: inline-block; 
+    max-width: 100%; 
+}
+
+.map-container img {
+    max-width: 90%; 
+    height: auto; 
+    border-radius: 9px; 
+    border: 3px thin #93bb61;
+}
