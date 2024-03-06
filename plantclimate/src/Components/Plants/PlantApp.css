@@ -1,21 +1,71 @@
-.back-to-homepage {
-    margin-top: 50px;
-  }
-
-  .plant-image {
-    width: 30vw; 
+.plant-image {
+    width: 25vw; 
     height: 22.5vw; 
     object-fit: cover;
-    border-radius: 8px;
-    max-width: 200px; 
-    max-height: 150px; 
+    border-radius: 9px;
   }
-  .plant-container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
+  
   .plant-item {
     flex-direction: row;
   }
+
+  .plant_app_container {
+    position: relative; 
+    padding-top: 120px; 
+    margin: 10px;
+  }
+
+  .plant-search-bar {
+    display: flex;
+    gap: 8px;
+    padding: 10px;
+    background-color: rgb(232, 229, 229);
+    border-radius: 12px;
+  }
+
+  .search-bar-container {
+    position: fixed;
+    width: 98%; 
+  }
+
+  .plant-search-bar input {
+    display: flex;
+    border: none;
+    outline: none;
+    padding: 4px;
+    color: #626262;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    background: none;
+}
+
+.plant-results-container {
+  margin-top: 50px; 
+  overflow-y: auto; 
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.plant-item a {
+  text-decoration: none; 
+  font-size: 10px;
+  color: black;
+}
+
+.plant-item {
+  width: calc(50% - 20px);
+  margin: 10px; 
+  box-sizing: border-box; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+}
+
+
+
+  
+
+
