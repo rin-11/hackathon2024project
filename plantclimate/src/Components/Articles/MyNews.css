@@ -1,0 +1,25 @@
+/* MyNews.css */
+.my-news {
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .my-news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+  }
+  
+  .my-news-item {
+    flex: 0 1 calc(33.333% - 20px); 
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    box-sizing: border-box; 
+  }
+  
+  .my-news-image {
+    max-width: 100%; 
+    max-height: auto; 
+  }
+  

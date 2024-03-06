@@ -1,0 +1,29 @@
+h1 {
+  text-align: left;
+  font-weight: 500;
+  margin-left: 10px;
+  margin-bottom: 0px; 
+  margin-top: 0px; 
+}
+
+.my-plants-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  margin: 0px 10px 0px; 
+  padding-bottom: 5px; 
+}
+
+.my-plant-item {
+  display: inline-block;
+  margin-right: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.my-plant-item img {
+  width: 75px;
+  height: 75px;
+  border: 2px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}

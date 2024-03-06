@@ -3,7 +3,6 @@ import './WeatherApp.css';
 import search_icon from './Assets/search.png';
 import clear_icon from './Assets/clear.png';
 import rain_icon from './Assets/rain.png';
-import wind_icon from './Assets/wind.png';
 import snow_icon from './Assets/snow.png';
 import cloud_icon from './Assets/cloud.png';
 import drizzle_icon from './Assets/drizzle.png';
@@ -12,11 +11,10 @@ import humidity_icon from './Assets/humidity.png';
 export const WeatherApp = () => {
     const api_key = "bbe31ca2e8e78841c19c7c154ed245e7";
     const [weatherIcon, setWeatherIcon] = useState(cloud_icon);
-    const [daylightHours, setDaylightHours] = useState('');
-    const [humidity, setHumidity] = useState('61%'); // default value
-    const [temperature, setTemperature] = useState('60°F'); // default value
-    const [location, setLocation] = useState('New York'); // default value
-    const [feelsLike, setFeelsLike] = useState('59°F'); // default value
+    const [humidity, setHumidity] = useState('61%'); 
+    const [temperature, setTemperature] = useState('60°F'); 
+    const [location, setLocation] = useState('New York'); 
+    const [windSpeed, setWindSpeed] = useState('0 km/hr'); // Initialize wind speed state
 
     const search = async () => {
         const element = document.querySelector(".cityInput");
@@ -29,18 +27,10 @@ export const WeatherApp = () => {
         const data = await response.json();
 
         if(data && data.main && data.sys) {
-            setHumidity(data.main.humidity + "%");
             setTemperature(Math.round(data.main.temp) + "°F");
-            setFeelsLike("Feels Like " + Math.round(data.main.feels_like) + "°F");
             setLocation(data.name);
-
-            // Calculate and update remaining daylight
-            const sunrise = data.sys.sunrise;
-            const sunset = data.sys.sunset;
-            const daylightDuration = sunset - sunrise;
-            const hours = Math.floor(daylightDuration / 3600); // Convert seconds to hours
-            const minutes = Math.floor((daylightDuration % 3600) / 60); // Remaining seconds converted to minutes
-            setDaylightHours(`${hours}h ${minutes}m`);
+            setHumidity(data.main.humidity + '%'); // Update humidity from API
+            setWindSpeed(data.wind.speed + ' km/hr'); // Convert wind speed to km/hr if necessary and update state
 
             // Update weather icon based on the icon code
             const iconMap = {
@@ -65,25 +55,19 @@ export const WeatherApp = () => {
                     <div className="element weather-temp">{temperature}</div>
                     <div className="element weather-image">
                         <img src={weatherIcon} alt="weather-icon" />
-                    </div>
-                    <div className="element daylight-hours">
-                        <div className="data">
-                            {daylightHours}
-                            <div className="text">Remaining Daylight</div>
-                        </div>
-                    </div>
+                    </div>               
                     <div className="element humidity">
-                        <img src={humidity_icon} alt="Humidity icon" className="icon" />
                         <div className="data">{humidity}
-                            <div className="text">Humidity</div>
+                        </div>     
+                    </div>
+                    <div className="element wind">
+                       
+                        <div className="data">{windSpeed}
                         </div>     
                     </div>
                 </div>
             </div>
-            <div className="weather-info">
-                <div className="weather-location">{location}</div>
-                <div className="feels-like">{feelsLike}</div>
-            </div>
+
             <div className="search-bar">
                 <input type="text" className="cityInput" placeholder="Search by city" />
                 <div className="search-icon" onClick={search}> 

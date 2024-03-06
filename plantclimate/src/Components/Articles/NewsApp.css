@@ -1,20 +1,19 @@
 
 .news-container {
     display: flex;
-    
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 
 .news-image {
-        width: 30vw; 
-        height: 22.5vw; 
-        object-fit: cover;
-        border-radius: 8px;
-        max-width: 150px; 
-        max-height: 100px; 
+    max-width: 100%; 
+    max-height: auto; 
 }
 .news {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     border-radius: 40px;
@@ -22,11 +21,10 @@
 }
 
 .news-item {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    border-radius: 40px;
-    cursor: pointer;
+    flex: 0 1 calc(33.333% - 20px); 
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    box-sizing: border-box; 
 }
 
 h2 {
