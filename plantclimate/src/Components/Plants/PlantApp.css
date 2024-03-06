@@ -1,3 +1,12 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+body {
+  font-family: "Roboto Mono", monospace;
+}
+
+
+
 .plant-image {
     width: 25vw; 
     height: 22.5vw; 
@@ -68,6 +77,11 @@
 
 .plant-results-container::-webkit-scrollbar {
   display: none;
+}
+
+.myplants h1 {
+  font-weight: 1000;
+  letter-spacing: 2px;
 }
 
 

@@ -21,7 +21,7 @@ const MyNews = () => {
 
   return (
     <div className="mynews">
-      <h1>My News</h1>
+      <h1>GreenCast</h1>
     <div className="my-news">
       <div className="my-news-container">
         {newsArticles.length > 0 ? (

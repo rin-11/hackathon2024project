@@ -21,7 +21,7 @@ const MyPlants = () => {
 
   return (
     <div className="myplants">
-      <h1>My Plants</h1>
+      <h1>PlantPulse</h1>
       <div className="my-plants-outer-container"> {/* Added outer container */}
         <div className="my-plants-container">
           {plants.length > 0 ? (
