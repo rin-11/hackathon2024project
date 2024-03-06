@@ -2,31 +2,35 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; 
 import './Footer.css'; 
+import homeIcon from './Assets/home.png';
+import searchIcon from './Assets/search.png';
+import communityIcon from './Assets/community.png';
+import profileIcon from './Assets/profile.png';
 
 const Footer = () => {
     return (
         <footer className="app-footer">
             <div className="footer-icon">
                 <Link to="/">
-                    <div className="icon"></div> 
+                <img src={homeIcon} alt="home-icon" />
                     <div className="label">Home</div>
                 </Link>
             </div>
             <div className="footer-icon">
                 <Link to="/plants">
-                    <div className="icon"></div> 
+                    <img src={searchIcon} alt="search-icon" />
                     <div className="label">Search</div>
                 </Link>
             </div>
             <div className="footer-icon">
                 <Link to="/news">
-                    <div className="icon"></div> 
+                <img src={communityIcon} alt="community-icon" />
                     <div className="label">Community</div>
                 </Link>
             </div>
             <div className="footer-icon">
                 <Link to="/profile">
-                    <div className="icon"></div> 
+                <img src={profileIcon} alt="profile-icon" />
                     <div className="label">Profile</div>
                 </Link>
             </div>

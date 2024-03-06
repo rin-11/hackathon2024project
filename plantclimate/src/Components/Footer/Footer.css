@@ -1,14 +1,14 @@
-/* Footer.css */
 .app-footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #93bb61;
+    border: 1px solid #93bb61;
     bottom: 0;
-    width: 100%;
     position: fixed;
     border-radius: 12px;
-    margin: 5px;
+    margin: 10px;
+    width: 92%;
+    padding: 5px;
 }
 
 .footer-icon {
@@ -18,11 +18,12 @@
     text-decoration: none;
 }
 
-.icon {
-    font-size: 24px; /* Adjust icon size */
+
+.app-footer a {
+    text-decoration: none; 
 }
 
-.label {
-    font-size: 12px; /* Adjust label text size */
-    margin-top: 5px;
+.footer-icon .label {
+    color: #93bb61; 
+    font-size: 14px; 
 }

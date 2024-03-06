@@ -2,13 +2,14 @@
   position: fixed;
   top: 250px; 
   left: 0;
-  right: 0; 
-
+  right: 0;
+  bottom: 60px; /* Add a bottom property if your design permits, to ensure it doesn't overlap with the footer */
+  overflow-y: auto; /* If you want to scroll within .mynews */
 }
 
 .my-news {
-  overflow-y: auto; 
-  max-height: calc(100vh - 250px); 
+  overflow-y: auto;
+  max-height: calc(100vh - 250px - 120px); /* Here, 60px is an example footer height */
 }
 
 .my-news-container {
@@ -18,11 +19,12 @@
 }
 
 .my-news-item {
-  width: 80%; 
+  width: 80%; /* Adjust width as needed */
+  margin-bottom: 20px; /* Add space between items */
   box-sizing: border-box;
 }
 
 .my-news-image {
-  max-width: 80%;
+  max-width: 100%; /* Adjust if necessary */
   height: auto;
 }
