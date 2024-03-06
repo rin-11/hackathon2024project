@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import './PlantDetails.css';
 
 const PlantDetails = () => {
   const { id } = useParams();
@@ -45,7 +46,8 @@ const PlantDetails = () => {
   if (error) return <div>Error: {error}</div>;
 
   return (
-    <div>
+    <div className="plant_details_container">
+    <div className="details-content">
       {plant ? (
         <>
           <h1>{plant.common_name || 'Common name not available'}</h1>
@@ -81,6 +83,7 @@ const PlantDetails = () => {
       ) : (
         <p>Plant details not available.</p>
       )}
+    </div>
     </div>
   );
 };

@@ -55,7 +55,7 @@ const PlantApp = () => {
           plants.map((plant) => (
             <div key={plant.id} className="plant-item">
               <Link to={`/plants/${plant.id}`}>
-                <h2>{plant.common_name || 'Name not available'}</h2>
+                <h2>{plant.common_name || plant.scientific_name }</h2>
                 {plant.image_url && (
                   <img src={plant.image_url} alt={plant.scientific_name || 'Plant'} className="plant-image" />
                 )}

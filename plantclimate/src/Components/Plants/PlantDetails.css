@@ -1,0 +1,49 @@
+.plant_details_container {
+    position: relative;
+    padding-top: 120px; 
+    margin: 10px;
+    padding-bottom: 200px; 
+    overflow: hidden; 
+  }
+  
+  .details-content {
+    max-width: 95%; 
+    margin: auto;
+    overflow-y: auto; 
+    max-height: calc(90vh - 180px); 
+  }
+  
+  .details-content img {
+    width: 25vw;
+    height: 22.5vw;
+    object-fit: cover;
+    border-radius: 9px;
+    max-width: 300px; 
+    max-height: 270px;
+  }
+  
+  .back-to-homepage {
+    margin-top: 20px;
+  }
+  
+  .back-to-homepage a {
+    text-decoration: none;
+    color: #626262; 
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .details-text {
+    font-size: 16px; 
+    margin-bottom: 10px;
+  }
+  
+  h1, h3 {
+    text-align: center; 
+    margin-bottom: 20px; 
+  }
+  
+  .details-content::-webkit-scrollbar {
+    display: none;
+  }
+  
