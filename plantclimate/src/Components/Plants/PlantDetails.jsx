@@ -58,6 +58,7 @@ const PlantDetails = () => {
           )}
           <div className="name">
             <h1>{plant.common_name || 'Common name not available'}</h1>
+            <h4>Scientific Name:</h4>
             <h3>{plant.scientific_name || 'Not available'}</h3>
           </div>
             <div className="native">

@@ -1,35 +1,50 @@
 .plant_details_container {
-    position: relative;
-    padding-top: 120px; 
-    margin: 5px;
-    padding-bottom: 100px; 
-    overflow: hidden; 
-  }
-  
-  .details-content {
-    max-width: 95%; 
-    margin: auto;
-    overflow-y: auto; 
-    max-height: calc(80vh - 50px); 
-  }
-  
-  .details-content img {
-    width: 90%;
-    height: 15vw;
-    object-fit: cover;
-    border-radius: 9px;
-  }
-  
-  .details-content > h1 {
-    text-align: center;
-    justify-content: center;
-  }
-  .details-content > img {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-  .details-content::-webkit-scrollbar {
-    display: none;
-  }
-  
+  position: relative;
+  padding-top: 100px;
+  margin: 5px;
+  overflow: hidden;
+}
+
+.details-content {
+  max-width: 95%;
+  margin: auto;
+  overflow-y: auto;
+  max-height: calc(80vh - 150px);
+}
+
+.details-content .name h1 {
+  text-align: center;
+  margin: 0 auto; 
+  display: block;
+}
+
+.details-content > img:first-of-type {
+  width: 300px; 
+  height: 300px;
+  object-fit: cover;
+  border-radius: 9px;
+  display: block;
+  margin: 0 auto; 
+}
+
+.plant_details_container p, .details-content > div {
+  text-align: left; 
+  font-size: 15px;
+}
+
+.details-content h1, .details-content h3, .details-content h4 {
+  text-align: left; 
+}
+
+.details-content .additional-images img {
+  width: 100px; 
+  height: 100px;
+  object-fit: cover;
+  border-radius: 9px;
+  margin: 2px; 
+  display: inline-block; 
+}
+
+.details-content::-webkit-scrollbar {
+  display: none;
+}

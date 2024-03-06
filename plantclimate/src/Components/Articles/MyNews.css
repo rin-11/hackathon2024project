@@ -7,7 +7,7 @@ body {
 
 .mynews {
   position: fixed;
-  top: 240px; 
+  top: 325px; 
   left: 0;
   right: 0;
   overflow-y: auto; 
@@ -15,7 +15,7 @@ body {
 
 .my-news {
   overflow-y: auto;
-  max-height: calc(100vh - 250px - 120px); 
+  max-height: calc(100vh - 250px - 200px); 
 }
 
 .mynews h1 {

@@ -1,11 +1,59 @@
+.full-header {
+    text-align: center;
+    position: relative; 
+}
+
+.logo {
+    max-width: 100%; 
+    height: auto; 
+}
+
 .header {
+    display: flex;
+    justify-content: space-around; /* Adjusted to space-around for even spacing */
+    align-items: center;
+    padding: 10px 20px; /* Added horizontal padding */
     position: fixed;
+    width: 100%;
+    top: 60px;
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+}
+
+
+.weather, .map {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 10px;
+}
+
+.map img {
+    height: 100%; 
+    object-fit: contain; 
+}
+
+.weather, .map {
+    display: flex;
+    justify-content: center; /* Centers the content inside each */
+    align-items: center; /* Vertically aligns the content */
+    padding: 10px;
 }
 
 .map {
     background-color: #93bb61;
-    border-radius: 12px; 
+    border-radius: 12px;
     margin: 2px;
-    padding: 20px;
+    padding: 15px;
+    height: auto; 
+    max-width: 60px; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
 }
 
+.map img {
+    width: 100%; /* Adjust the width of the image to fit the div */
+    height: auto; /* Adjusts height automatically to maintain aspect ratio */
+    object-fit: contain; /* Ensures the image aspect ratio is maintained without being cut off */
+}
