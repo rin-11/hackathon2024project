@@ -1,4 +1,6 @@
-
+.header {
+    position: fixed;
+}
 
 .map {
     background-color: #93bb61;

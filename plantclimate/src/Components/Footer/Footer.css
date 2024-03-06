@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: #93bb61;
     bottom: 0;
     width: 100%;
     position: fixed;

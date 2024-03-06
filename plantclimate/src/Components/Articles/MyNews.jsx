@@ -20,6 +20,8 @@ const MyNews = () => {
   }, []);
 
   return (
+    <div className="mynews">
+      <h1>My News</h1>
     <div className="my-news">
       <div className="my-news-container">
         {newsArticles.length > 0 ? (
@@ -37,6 +39,7 @@ const MyNews = () => {
           <p>Loading...</p>
         )}
       </div>
+    </div>
     </div>
   );
 };
