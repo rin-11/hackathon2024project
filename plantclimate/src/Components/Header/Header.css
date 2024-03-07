@@ -10,13 +10,13 @@
 
 .header {
     display: flex;
-    justify-content: space-around; /* Adjusted to space-around for even spacing */
+    justify-content: space-around; 
     align-items: center;
-    padding: 10px 20px; /* Added horizontal padding */
+    padding: 10px 20px;
     position: fixed;
     width: 100%;
     top: 60px;
-    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+    box-sizing: border-box; 
 }
 
 
@@ -35,8 +35,8 @@
 
 .weather, .map {
     display: flex;
-    justify-content: center; /* Centers the content inside each */
-    align-items: center; /* Vertically aligns the content */
+    justify-content: center; 
+    align-items: center; 
     padding: 10px;
 }
 
@@ -53,7 +53,7 @@
 }
 
 .map img {
-    width: 100%; /* Adjust the width of the image to fit the div */
-    height: auto; /* Adjusts height automatically to maintain aspect ratio */
-    object-fit: contain; /* Ensures the image aspect ratio is maintained without being cut off */
+    width: 100%; 
+    height: auto; 
+    object-fit: contain; 
 }

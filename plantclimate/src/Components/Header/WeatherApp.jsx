@@ -6,14 +6,14 @@ import rain_icon from './Assets/rain.png';
 import snow_icon from './Assets/snow.png';
 import cloud_icon from './Assets/cloud.png';
 import drizzle_icon from './Assets/drizzle.png';
-import humidity_icon from './Assets/humidity.png';
+
 
 export const WeatherApp = () => {
     const api_key = "bbe31ca2e8e78841c19c7c154ed245e7";
     const [weatherIcon, setWeatherIcon] = useState(cloud_icon);
     const [humidity, setHumidity] = useState('61%'); 
     const [temperature, setTemperature] = useState('60°F'); 
-    const [location, setLocation] = useState('New York'); 
+    // const [location, setLocation] = useState('New York'); 
     const [windSpeed, setWindSpeed] = useState('0 km/hr'); // Initialize wind speed state
 
     const search = async () => {
@@ -28,9 +28,9 @@ export const WeatherApp = () => {
 
         if(data && data.main && data.sys) {
             setTemperature(Math.round(data.main.temp) + "°F");
-            setLocation(data.name);
-            setHumidity(data.main.humidity + '%'); // Update humidity from API
-            setWindSpeed(data.wind.speed + ' km/hr'); // Convert wind speed to km/hr if necessary and update state
+            // setLocation(data.name);
+            setHumidity(data.main.humidity + '%'); 
+            setWindSpeed(data.wind.speed + ' km/hr'); 
 
             // Update weather icon based on the icon code
             const iconMap = {
