@@ -29,6 +29,7 @@ const MyNews = () => {
             <div key={index} className="my-news-item">
               <a href={article.url} target="_blank" rel="noopener noreferrer">
                 <img src={article.thumbnail} alt={article.source} className="my-news-image" />
+                <hr></hr>
                 <h2>{article.title}</h2>
               </a>
             </div>

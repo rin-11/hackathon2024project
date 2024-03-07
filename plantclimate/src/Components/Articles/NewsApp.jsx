@@ -26,9 +26,9 @@ const NewsApp = () => {
           newsArticles.map((article, index) => (
             <div key={index} className="news-item">
               <a href={article.url} target="_blank" rel="noopener noreferrer">
-                <h2>{article.title}</h2>
-                <img src={article.thumbnail} alt={article.source} className="news-image" />
-                <p>Published: {new Date(article.published).toLocaleDateString()}</p>
+              <img src={article.thumbnail} alt={article.source} className="news-image" />
+                <h2>{article.title}</h2>            
+                <p>{new Date(article.published).toLocaleDateString()}</p>
               </a>
             </div>
           ))

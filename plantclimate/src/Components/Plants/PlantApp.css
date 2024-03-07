@@ -48,10 +48,17 @@ body {
     background: none;
 }
 
+.search-bar-container {
+  position: fixed;
+  top: 200; /* Ensures it stays at the top */
+  width: 95%; 
+  z-index: 100; /* Ensures it stays above other content */
+}
+
+
 .plant-results-container {
-  margin-top: 20px; 
   overflow-y: auto; 
-  max-height: calc(90vh - 220px); 
+  max-height: calc(72vh - 100px); 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -80,6 +87,11 @@ body {
   font-weight: 1000;
   letter-spacing: 2px;
 }
+
+.search-bar-placeholder {
+  height: 50px; 
+}
+
 
 
 

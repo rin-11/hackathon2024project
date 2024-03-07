@@ -51,6 +51,7 @@ const PlantApp = () => {
           />
         </div>
       </div>
+      <div className="search-bar-placeholder"></div> 
       <div className="plant-results-container">
         {plants.length > 0 ? (
           plants.map((plant) => (
