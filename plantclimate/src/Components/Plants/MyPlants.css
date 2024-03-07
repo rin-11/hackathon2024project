@@ -39,6 +39,8 @@ h1 {
   border: 2px solid white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
+  border: 2px solid #ddd; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
 }
 
  

@@ -27,9 +27,8 @@ const NewsApp = () => {
             <div key={index} className="news-item">
               <a href={article.url} target="_blank" rel="noopener noreferrer">
                 <h2>{article.title}</h2>
-                <img src={article.thumbnail} alt="article-thumbnail" className="news-image" />
+                <img src={article.thumbnail} alt={article.source} className="news-image" />
                 <p>Published: {new Date(article.published).toLocaleDateString()}</p>
-                <p>Source: {article.source}</p>
               </a>
             </div>
           ))

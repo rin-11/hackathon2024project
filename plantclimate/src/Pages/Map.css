@@ -15,5 +15,8 @@
     max-width: 90%; 
     height: auto; 
     border-radius: 9px; 
-    border: 3px thin #93bb61;
+    border: 2px solid #ddd; 
+    padding: 10px;
+    margin-bottom: 20px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
 }

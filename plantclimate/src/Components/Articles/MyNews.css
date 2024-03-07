@@ -35,9 +35,14 @@ body {
 
 
 .my-news-item {
-  width: 80%;
-  margin-bottom: 20px; 
   box-sizing: border-box;
+  border: 2px solid #ddd; 
+  padding: 10px;
+  margin-bottom: 20px; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+  border-radius: 10px; 
+  text-align: center; 
+  width: 80%; 
 }
 
 .my-news-image {

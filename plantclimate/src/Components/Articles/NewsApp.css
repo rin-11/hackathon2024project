@@ -16,7 +16,7 @@
     max-height: auto; 
 }
 .news {
-    padding-top: 75px; /* Adjust this value based on your header's actual height */
+    padding-top: 75px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
