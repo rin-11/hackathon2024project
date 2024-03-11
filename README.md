@@ -1,6 +1,6 @@
-# Smart Grow
+# Environmental Sustainability Hackathon Submission
 
-## The Ultimate Plant Climate & Weather App for Gardeners
+## Smart Grow: The Ultimate Plant Climate & Weather App for Gardeners
 
 - Plants API: https://trefle.io/
 - News API: Climate News Feed API https://www.thetellusproject.com/ 
